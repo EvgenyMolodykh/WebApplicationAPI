@@ -14,10 +14,8 @@ namespace ServerApp.Controllers
             int evenCount = 0;
             int oddCount = 0;
 
-            // Преобразуем текущую дату и время в строку
             string timestamp = currentTime.ToString("yyyyMMddHHmmss");
 
-            // Подсчёт четных и нечетных цифр
             foreach (char c in timestamp)
             {
                 if (int.TryParse(c.ToString(), out int digit))
@@ -27,7 +25,6 @@ namespace ServerApp.Controllers
                 }
             }
 
-            // Формируем ответ в зависимости от количества четных и нечетных цифр
             if (evenCount > oddCount)
                 return "чет!";
             else if (oddCount > evenCount)
