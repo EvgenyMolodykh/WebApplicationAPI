@@ -15,7 +15,7 @@ WORKDIR /src
 
 COPY ["ServerApp.csproj", "."]
 
-RUN dotnet restore "./ServerApp.csproj"
+RUN dotnet restore "./ServerApp.csproj" 
 
 COPY . .
 
